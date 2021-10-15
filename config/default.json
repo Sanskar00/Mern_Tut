@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://socio_dev_09:test1234@brad-course.js9rh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://socio_dev_09:test1234@brad-course.js9rh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "my secret token"
 }
