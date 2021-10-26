@@ -1,4 +1,9 @@
-import { registerActionsTypes, authCheckerTyper } from "../actions/types";
+import {
+  registerActionsTypes,
+  authCheckerTyper,
+  loginActionsTypes,
+  LOGOUT,
+} from "../actions/types";
 
 const initialState = {
   token: localStorage.getItem("token"),
@@ -19,6 +24,7 @@ const authReducer = (state = initialState, action) => {
         user: payload,
       };
     case registerActionsTypes.REGISTER_SUCCESS:
+    case loginActionsTypes.LOGIN_SUCCESS:
       localStorage.setItem("token", payload.token);
       return {
         ...state,
@@ -27,7 +33,9 @@ const authReducer = (state = initialState, action) => {
         loading: false,
       };
     case registerActionsTypes.REGISTER_FAILURE:
+    case loginActionsTypes.LOGIN_FAILURE:
     case authCheckerTyper.AUTH_ERROR:
+    case LOGOUT:
       localStorage.removeItem("token");
       return {
         ...state,

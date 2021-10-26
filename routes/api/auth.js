@@ -25,10 +25,8 @@ router.get("/", auth, async (req, res) => {
 //@access Public
 router.post(
   "/",
-  [
-    check("email", "Please fill a valid email").isEmail(),
-    check("password", "Password is required ").exists(),
-  ],
+  check("email", "Please fill a valid email").isEmail(),
+  check("password", "Password is required ").exists(),
 
   async (req, res) => {
     const errors = validationResult(req);
@@ -65,7 +63,7 @@ router.post(
       jwt.sign(
         payload,
         config.get("jwtSecret"),
-        { expiresIn: 360000 },
+        { expiresIn: "30000" },
         (err, token) => {
           if (err) throw err;
           res.json({ token });

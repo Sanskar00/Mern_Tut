@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
+
 // import { prototype } from "request/node_modules/form-data";
 
-export const Regiter = ({ setAlert, register }) => {
+export const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -83,9 +84,9 @@ export const Regiter = ({ setAlert, register }) => {
   );
 };
 
-Regiter.prototype = {
-  setAlert: PropTypes.func.required,
-  register: PropTypes.func.required,
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
 };
 
-export default connect(null, { setAlert, register })(Regiter);
+export default connect(null, { setAlert, register })(Register);

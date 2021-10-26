@@ -11,3 +11,10 @@ export const authCheckerTyper = {
   USER_LOADED: "USER_LOADED",
   AUTH_ERROR: "AUTH_ERROR",
 };
+
+export const loginActionsTypes = {
+  LOGIN_SUCCESS: "LOGIN_SUCCESS",
+  LOGIN_FAILURE: "LOGIN_FAILURE",
+};
+
+export const LOGOUT = "LOGOUT";
