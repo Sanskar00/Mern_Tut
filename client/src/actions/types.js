@@ -18,3 +18,13 @@ export const loginActionsTypes = {
 };
 
 export const LOGOUT = "LOGOUT";
+
+export const profileActionTypes = {
+  GET_PROFILE: "GET_PROFILE",
+  GET_PROFILES: "GET_PROFILES",
+  GET_REPOS: "GET_REPOS",
+  CLEAR_PROFILE: "CLEAR_PROFILE",
+  PROFILE_ERROR: "PROFILE_ERROR",
+  UPDATE_PROFILE: "UPDATE_PROFILE",
+  ACCOUNT_DELETED: "ACCOUNT_DELETED",
+};

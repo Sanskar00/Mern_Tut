@@ -3,6 +3,7 @@ import {
   authCheckerTyper,
   loginActionsTypes,
   LOGOUT,
+  profileActionTypes,
 } from "../actions/types";
 
 const initialState = {
@@ -36,6 +37,7 @@ const authReducer = (state = initialState, action) => {
     case loginActionsTypes.LOGIN_FAILURE:
     case authCheckerTyper.AUTH_ERROR:
     case LOGOUT:
+    case profileActionTypes.ACCOUNT_DELETED:
       localStorage.removeItem("token");
       return {
         ...state,
